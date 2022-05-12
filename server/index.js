@@ -18,6 +18,8 @@ const initializeServer = (port) => {
 
 app.use(express.json());
 app.use(morgan("dev"));
+
 app.use("/things", router);
 
 module.exports = initializeServer;
+
