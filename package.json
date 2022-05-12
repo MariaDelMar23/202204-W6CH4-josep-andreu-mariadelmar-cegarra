@@ -1,0 +1,36 @@
+{
+  "name": "definitiva",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaDelMar23/202204-W6CH4-josep-andreu-mariadelmar-cegarra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariaDelMar23/202204-W6CH4-josep-andreu-mariadelmar-cegarra/issues"
+  },
+  "homepage": "https://github.com/MariaDelMar23/202204-W6CH4-josep-andreu-mariadelmar-cegarra#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.2.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "husky": "^8.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16"
+  }
+}
