@@ -1,5 +1,7 @@
 const thingsLearned = [
-  { thing: "Testiar" },
-  { thing: "Fuck up with git" },
-  { thing: "React" },
+  { id: 1, thing: "Testiar" },
+  { id: 2, thing: "Fuck up with git" },
+  { id: 3, thing: "React" },
 ];
+
+module.exports(thingsLearned);
