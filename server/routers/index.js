@@ -7,13 +7,6 @@ router.get("/", (req, res) => {
   res.status(200).json(things);
 });
 
-router.delete("/:idThing", (req, res) => {
-  const { idThing } = req.params;
-  const idthingToDelete = things.findIndex((thing) => thing.id === +idThing);
-  things.splice(idthingToDelete, 0);
-  res.status(200).json(things[idthingToDelete]);
-});
-
 router.post("/", (req, res) => {
   const thing = req.body;
   things.push(thing);
@@ -33,3 +26,18 @@ router.get("/:idThing", (req, res) => {
   const idthingToShow = things.findIndex((thing) => thing.id === +idThing);
   res.status(200).json(things[idthingToShow]);
 });
+
+router.delete("/:id", (req, res) => {
+  const { id } = req.params;
+  debug(id);
+  things.splice(
+    things.findIndex((thing) => thing.id === +id),
+    1
+  );
+  res.status(200).json(things);
+});
+
+router.get("/things");
+
+module.exports = router;
+
