@@ -1,7 +1,8 @@
+const debug = require("debug")("apiThings:routers");
 const express = require("express");
 
 const router = express.Router();
-const things = require("../thingsData");
+let things = require("../thingsData");
 
 router.get("/", (req, res) => {
   res.status(200).json(things);
@@ -15,14 +16,14 @@ router.post("/", (req, res) => {
 
 router.put("/", (req, res) => {
   const thingModificated = req.body;
-  things.map((thing) =>
+  things = things.map((thing) =>
     thing.id === thingModificated.id ? thingModificated : thing
   );
   res.status(200).json(thingModificated);
 });
 
 router.get("/:idThing", (req, res) => {
-  const idThing = req.params;
+  const { idThing } = req.params;
   const idthingToShow = things.findIndex((thing) => thing.id === +idThing);
   res.status(200).json(things[idthingToShow]);
 });
@@ -40,4 +41,3 @@ router.delete("/:id", (req, res) => {
 router.get("/things");
 
 module.exports = router;
-
