@@ -1,8 +1,12 @@
 const express = require("express");
-const debug = require("debug").config("apiThings:server");
 
+const debug = require("debug")("apiThings:server");
+
+const morgan = require("morgan");
+const router = require("./routers");
+
+const app = express();
 const initializeServer = (port) => {
-  const app = express();
   const server = app.listen(port, () => {
     debug(`Server listening on port ${port}`);
   });
@@ -12,4 +16,8 @@ const initializeServer = (port) => {
   });
 };
 
-module.exports(initializeServer);
+app.use(express.json());
+app.use(morgan("dev"));
+app.use("/things", router);
+
+module.exports = initializeServer;
