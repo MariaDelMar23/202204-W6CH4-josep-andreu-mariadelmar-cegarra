@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "start": "node index",
     "pokemon": "nodemon . -q"
   },
   "repository": {
     "type": "git",
+    
     "url": "git+https://github.com/MariaDelMar23/202204-W6CH4-josep-andreu-mariadelmar-cegarra.git"
   },
   "author": "",
