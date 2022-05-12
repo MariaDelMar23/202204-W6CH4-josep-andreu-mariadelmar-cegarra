@@ -17,7 +17,7 @@ router.post("/", (req, res) => {
 router.put("/", (req, res) => {
   const thingModificated = req.body;
   things = things.map((thing) =>
-    thing.id === thingModificated.id ? thingModificated : thing
+    thing.id === thingModificated.id ? { ...thingModificated } : { ...thing }
   );
   res.status(200).json(thingModificated);
 });
