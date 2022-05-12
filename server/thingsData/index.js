@@ -4,4 +4,4 @@ const thingsLearned = [
   { id: 3, thing: "React" },
 ];
 
-module.exports(thingsLearned);
+module.exports = thingsLearned;

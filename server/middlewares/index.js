@@ -1,4 +1,3 @@
-const app = require("express");
 const debug = require("debug")("apiThings:middleware");
 
 // eslint-disable-next-line no-unused-vars
